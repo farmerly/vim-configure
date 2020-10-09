@@ -20,11 +20,12 @@ set incsearch				" 输入搜索内容时就显示搜索结果
 set helplang=cn				" 设置中文帮助
 set encoding=utf-8			" 设置编码为UTF-8
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 启用pathogen
+call pathogen#infect()
+filetype plugin indent on
 " 定位到文件头,文件尾
 nnoremap <BS> gg
 nnoremap <CR> G
-
-call pathogen#infect()
 
 " 自动补全
 :inoremap ( ()<ESC>i
@@ -42,7 +43,6 @@ func ClosePair(char)
 	endif
 endfunc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype plugin indent on
 " 新建指定类型文件时，调用SetTitle函数 
 autocmd BufNewFile *.cpp,*.c,*.h,*.py,*.sh exec ":call SetTitle()" 
 " 定义函数SetTitle，自动插入文件头 
@@ -86,8 +86,8 @@ func SetTitle()
 endfunc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" 自定义快捷键
-nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F3> :TlistToggle<CR>
+nnoremap <F3> :NERDTreeToggle<CR>
+nnoremap <F4> :TlistToggle<CR>
 nnoremap <F5> :!ctags -R<CR>
 map <C-s> :wq<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
