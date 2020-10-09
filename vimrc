@@ -86,8 +86,8 @@ func SetTitle()
 endfunc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" 自定义快捷键
-nnoremap <F3> :NERDTreeToggle<CR>
-nnoremap <F4> :TlistToggle<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F3> :TlistToggle<CR>
 nnoremap <F5> :!ctags -R<CR>
 map <C-s> :wq<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
